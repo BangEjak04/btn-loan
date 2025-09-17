@@ -15,11 +15,16 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         $role = \BezhanSalleh\FilamentShield\Support\Utils::createRole();
-        
+
         User::factory()->create([
-            'name' => 'Admin',
+            'name' => 'Reza Andyah Wijaya',
             'email' => 'admin@example.com',
             'password' => Hash::make('admin'),
-        ])->assignRole(['admin', $role]);
+        ])->assignRole([$role]);
+        User::factory()->create([
+            'name' => 'Elwin Syahrial',
+            'email' => 'elwin@example.com',
+            'password' => Hash::make('elwin'),
+        ])->assignRole(['admin']);
     }
 }
