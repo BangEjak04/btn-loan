@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/wijs2967/public_html/
+    - /bin/bash echo "Testing"
+    - /bin/bash php -v
