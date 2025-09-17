@@ -1,5 +1,16 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/wijs2967/public_html/
-    - /bin/cp -r public $DEPLOYPATH
+    - export LARAVELPATH=/home/wijs2967/laravel/
+    - export PUBLICPATH=/home/wijs2967/public_html/
+    - /bin/cp -R app $LARAVELPATH
+    - /bin/cp -R bootstrap $LARAVELPATH
+    - /bin/cp -R config $LARAVELPATH
+    - /bin/cp -R database $LARAVELPATH
+    - /bin/cp -R public $PUBLICPATH
+    - /bin/cp -R resources $LARAVELPATH
+    - /bin/cp -R routes $LARAVELPATH
+    - /bin/cp -R storage $LARAVELPATH
+    - /bin/cp -R tests $LARAVELPATH
+    - /bin/cp -R .env.example $LARAVELPATH
+    - /usr/local/bin/ea-php83 -v
