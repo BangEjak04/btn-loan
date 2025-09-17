@@ -3,8 +3,8 @@ deployment:
   tasks:
     - export LARAVELPATH=/home/wijs2967/laravel/
     - export PUBLICPATH=/home/wijs2967/public_html/
-    - /bin/cp app $LARAVELPATH
-    - /bin/cp public $PUBLICPATH
+    - /bin/cp -r app $LARAVELPATH
+    - /bin/cp -R public $PUBLICPATH
     - /bin/cp .env.example $LARAVELPATH
 
     # - /bin/cp -R bootstrap $LARAVELPATH
